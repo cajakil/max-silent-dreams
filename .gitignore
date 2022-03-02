@@ -1,3 +1,5 @@
 collective/*
 application/*
-.DS_Store
+*.DS_Store
+Audio/*
+Mixdown/*
