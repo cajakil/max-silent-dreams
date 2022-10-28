@@ -3,3 +3,13 @@ application/*
 *.DS_Store
 Audio/*
 Mixdown/*
+Images/*
+
+Vixdown_trailer/*
+Vixdown_PERF/
+
+#cubase files
+*.bak
+
+# some kida system file
+._*
