@@ -177,7 +177,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 1474.0, 90.0, 1554.0, 956.0 ],
+						"rect" : [ -148.0, -62.0, 1554.0, 928.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -215,7 +215,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 315.982517659664154, 175.800671239666144, 130.349649846553802, 51.0 ],
-									"presentation_linecount" : 4,
 									"text" : "seems to be: playback the delay buffer for length + fade + 400 safety padding to avoid click being audible"
 								}
 
@@ -250,7 +249,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 1263.559378623962402, 345.857023984193802, 154.0, 20.0 ],
-									"presentation_linecount" : 2,
 									"text" : "old if rewind complete code"
 								}
 
@@ -599,7 +597,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 888.728036820888519, 313.619794070720673, 150.0, 33.0 ],
+									"patching_rect" : [ 888.728036820888519, 313.619794070720673, 153.0, 33.0 ],
 									"text" : "ASSUME rewind complete - fade in"
 								}
 
