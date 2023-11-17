@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 3,
-			"revision" : 1,
+			"minor" : 5,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1474.0, 90.0, 1980.0, 956.0 ],
+		"rect" : [ 34.0, 115.0, 1372.0, 751.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,12 +40,61 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-10",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 81.0, 47.0, 264.0, 20.0 ],
+					"text" : "int (and potentially float) are delay buffer lengths"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 20.230455944918305,
+					"id" : "obj-11",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 60.5, 256.0, 101.0, 29.0 ],
+					"text" : "delay lane",
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"id" : "obj-8",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 322.966002732515108, 106.152883350849152, 280.0, 37.0 ],
+					"text" : "messages beginning with length and fade are caught and passed to the playback object."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 54.465115904807931, 11.883717258134851, 280.0, 33.0 ],
+					"text" : "Signal and messages to delay lane. length and fade are custom delay lane playback parameters"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-9",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "multichannelsignal" ],
-					"patching_rect" : [ 221.408260822296143, 333.139522969722748, 73.671436876058351, 22.0 ],
+					"patching_rect" : [ 16.351818293333167, 446.139522969722748, 73.671436876058351, 22.0 ],
 					"text" : "mc.pack~"
 				}
 
@@ -57,7 +106,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 6,
 					"outlettype" : [ "signal", "bang", "int", "float", "", "list" ],
-					"patching_rect" : [ 60.465115904807931, 36.372088332334528, 71.5, 22.0 ],
+					"patching_rect" : [ 16.465115904807931, 68.372088332334528, 187.5, 22.0 ],
 					"text" : "typeroute~"
 				}
 
@@ -69,7 +118,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 240.966002732515108, 81.652883350849152, 124.0, 22.0 ],
+					"patching_rect" : [ 185.465115904807931, 113.760166436433792, 124.0, 22.0 ],
 					"text" : "routepass length fade"
 				}
 
@@ -78,24 +127,25 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-3",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 388.81783945075972, 398.963365988908777, 30.0, 30.0 ]
+					"patching_rect" : [ 183.761396921796745, 511.963365988908777, 30.0, 30.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "Pan (0. = hard left, 1. = hard right)",
+					"cool" : 1,
 					"id" : "obj-1",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 388.81783945075972, 42.222217042604456, 30.0, 30.0 ]
+					"patching_rect" : [ 610.81783945075972, 11.883717258134851, 30.0, 30.0 ]
 				}
 
 			}
@@ -106,7 +156,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "signal" ],
-					"patching_rect" : [ 221.521558433770906, 281.965267522199667, 73.558139264583588, 22.0 ],
+					"patching_rect" : [ 16.465115904807931, 394.965267522199667, 73.558139264583588, 22.0 ],
 					"text" : "nw.cppan~"
 				}
 
@@ -118,31 +168,33 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 117.323858559131509, 81.760166436433792, 81.0, 22.0 ],
+					"patching_rect" : [ 41.323858559131509, 137.760166436433792, 81.0, 22.0 ],
 					"text" : "r dellaneclear"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.03921568627451, 0.341176470588235, 0.776470588235294, 1.0 ],
 					"id" : "obj-236",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "tapconnect" ],
-					"patching_rect" : [ 60.465115904807931, 156.918648809194565, 61.0, 22.0 ],
-					"text" : "mc.tapin~"
+					"patching_rect" : [ 16.465115904807931, 188.918648809194565, 91.0, 22.0 ],
+					"text" : "mc.tapin~ 5000"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.03921568627451, 0.341176470588235, 0.776470588235294, 1.0 ],
 					"id" : "obj-23",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "multichannelsignal", "signal" ],
-					"patching_rect" : [ 221.521558433770906, 217.544752919534687, 188.0, 22.0 ],
+					"patching_rect" : [ 16.465115904807931, 330.544752919534687, 188.0, 22.0 ],
 					"text" : "SD_delayLaneTapOutComponent",
 					"varname" : "delayLane"
 				}
@@ -150,14 +202,14 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "Signal and messages to delay lane. length and fade are custom delay lane playback parameters",
 					"id" : "obj-25",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 60.465115904807931, -0.116282741865149, 30.0, 30.0 ]
+					"outlettype" : [ "multichannelsignal" ],
+					"patching_rect" : [ 16.465115904807931, 11.883717258134851, 30.0, 30.0 ]
 				}
 
 			}
@@ -165,11 +217,26 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-26",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 221.408260822296143, 393.037440257249841, 30.0, 30.0 ]
+					"patching_rect" : [ 16.351818293333167, 506.037440257249841, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"angle" : 270.0,
+					"grad1" : [ 0.019607843137255, 0.176470588235294, 0.407843137254902, 1.0 ],
+					"grad2" : [ 0.2, 0.2, 0.2, 1.0 ],
+					"id" : "obj-13",
+					"maxclass" : "panel",
+					"mode" : 1,
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 13.0, 182.0, 196.0, 177.0 ],
+					"proportion" : 0.5
 				}
 
 			}
@@ -177,6 +244,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 1 ],
+					"midpoints" : [ 620.31783945075972, 381.0, 80.523255169391518, 381.0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -211,6 +279,7 @@
 			}
 , 			{
 				"patchline" : 				{
+					"color" : [ 0.048230975866318, 0.246476784348488, 0.725483894348145, 1.0 ],
 					"destination" : [ "obj-23", 0 ],
 					"source" : [ "obj-236", 0 ]
 				}
@@ -226,6 +295,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-236", 0 ],
+					"midpoints" : [ 50.823858559131509, 174.0, 25.965115904807931, 174.0 ],
 					"source" : [ "obj-397", 0 ]
 				}
 
@@ -247,6 +317,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-236", 0 ],
+					"midpoints" : [ 299.965115904807931, 174.0, 25.965115904807931, 174.0 ],
 					"source" : [ "obj-4", 2 ]
 				}
 
@@ -254,7 +325,24 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-236", 0 ],
+					"midpoints" : [ 160.765115904807942, 126.0, 25.965115904807931, 126.0 ],
 					"source" : [ "obj-5", 4 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-236", 0 ],
+					"midpoints" : [ 127.065115904807925, 126.0, 25.965115904807931, 126.0 ],
+					"source" : [ "obj-5", 3 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-236", 0 ],
+					"midpoints" : [ 93.365115904807936, 126.0, 25.965115904807931, 126.0 ],
+					"source" : [ "obj-5", 2 ]
 				}
 
 			}
@@ -279,20 +367,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "SD_delayLaneTapOutComponent.maxpat",
-				"bootpath" : "/Volumes/Seagate/CompCreativeProjects/2021/hp-silent-dreams-max",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "nw.cppan~.mxo",
-				"type" : "iLaX"
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }
