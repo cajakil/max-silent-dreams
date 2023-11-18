@@ -23,7 +23,11 @@ I'm unable to generate a stand-alone version for Windows. If you're on Windows, 
 * it may take several seconds for the files to open
 * if you have issues, you can [file a bug report on GitHub](https://github.com/cajakil/max-silent-dreams/issues) or [contact me](https://jackcampbell.uk/contact)
 
-When first opening the application, you may need to allow the app access to the folder where it's stored, and the microphone
+**Using the MacOS Application**
+
+When first opening the application, you may need to allow the app access to the folder where it's stored, and the microphone.
+
+The application may not open if you rename the file
 
 ## Source code
 
