@@ -7,7 +7,7 @@
 |--------------|-----------|------------|-----------|------------| -----------| -----------|
 | Application      | .dmg  | MacOS       | no | no | 400MB (1GB extracted) | Download this if you don't have Max/MSP
 | Collective | .mxf      | Windows or MacOS        | v.8.5.5 or higher | no | 20MB | Download this if you have Max/MSP
-| Source code | .zip | Windows or MacOS | v.8.5.5 or higher | yes | less than 20MB | Download this if you want to edit and can follow instructions to include dependencies
+| Source code | .zip | Windows or MacOS | v.8.5.5 or higher | yes | less than 20MB | Download this if you have Max/MSP, want to edit and can follow instructions to include dependencies
 
 I'm unable to generate a stand-alone version for Windows. If you're on Windows, you can [install the free trial of Max/MSP](https://cycling74.com/downloads) and then use the Max/MSP collective. You don't need to pay for Max/MSP to use the patch for playback, even after the end of the trial.
 
