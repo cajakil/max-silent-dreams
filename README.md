@@ -11,17 +11,19 @@
 
 I'm unable to generate a stand-alone version for Windows. If you're on Windows, you can [install the free trial of Max/MSP](https://cycling74.com/downloads) and then use the Max/MSP collective. You don't need to pay for Max/MSP to use the patch for playback, even after the end of the trial.
 
-## Tips for easier downloading
-* wait a few seconds for the download to begin
-* it may take several seconds for the files to open
-* if you have issues, you can [file a bug report on GitHub](https://github.com/cajakil/max-silent-dreams/issues) or [contact me](https://jackcampbell.uk/contact)
-
 ## Important
 
 * Feedback warning: do not use the "mic" mode with a laptop's built in mic and built in speakers. Use headphones at least.
 * Set the output volume low to start with
 
 ## Documentation is [here](https://www.playbook.com/s/jack-campbell/8dqWmYCDWaF3URK1WUDxQAa6)
+
+**Tips for easier downloading**
+* wait a few seconds for the download to begin
+* it may take several seconds for the files to open
+* if you have issues, you can [file a bug report on GitHub](https://github.com/cajakil/max-silent-dreams/issues) or [contact me](https://jackcampbell.uk/contact)
+
+When first opening the application, you may need to allow the app access to the folder where it's stored, and the microphone
 
 ## Source code
 
