@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 3,
-			"revision" : 1,
+			"minor" : 5,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1474.0, 90.0, 1980.0, 956.0 ],
+		"rect" : [ 34.0, 143.0, 1195.0, 723.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,52 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-24",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 933.0, 336.0, 131.0, 22.0 ],
+					"text" : "print double-delay-lane"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-22",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 886.0, 226.666661559063698, 72.0, 22.0 ],
+					"text" : "route length"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-21",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 886.0, 296.0, 77.0, 22.0 ],
+					"text" : "startdelay $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-15",
+					"maxclass" : "live.meter~",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "float", "int" ],
+					"patching_rect" : [ 101.052635192871094, 80.000002861022949, 22.0, 440.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-17",
 					"maxclass" : "comment",
@@ -153,8 +199,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "multichannelsignal", "signal" ],
-					"patching_rect" : [ 808.18820558641653, 370.13734534369712, 188.0, 22.0 ],
-					"text" : "SD_delayLaneTapOutComponent",
+					"patching_rect" : [ 808.18820558641653, 370.13734534369712, 296.0, 22.0 ],
+					"text" : "SD_delayLaneTapOutComponent @rewindduration 0.",
 					"varname" : "delayLane[1]"
 				}
 
@@ -252,8 +298,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "tapconnect" ],
-					"patching_rect" : [ 524.909545147042763, 167.57880878301313, 61.0, 22.0 ],
-					"text" : "mc.tapin~"
+					"patching_rect" : [ 524.909545147042763, 167.57880878301313, 91.0, 22.0 ],
+					"text" : "mc.tapin~ 5000"
 				}
 
 			}
@@ -264,8 +310,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "multichannelsignal", "signal" ],
-					"patching_rect" : [ 212.632669554693479, 370.13734534369712, 188.0, 22.0 ],
-					"text" : "SD_delayLaneTapOutComponent",
+					"patching_rect" : [ 212.632669554693479, 370.13734534369712, 296.0, 22.0 ],
+					"text" : "SD_delayLaneTapOutComponent @rewindduration 0.",
 					"varname" : "delayLane"
 				}
 
@@ -359,6 +405,29 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-24", 0 ],
+					"order" : 1,
+					"source" : [ "obj-21", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 1 ],
+					"order" : 0,
+					"source" : [ "obj-21", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-21", 0 ],
+					"source" : [ "obj-22", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-23", 0 ]
 				}
@@ -406,6 +475,14 @@
 				"patchline" : 				{
 					"color" : [ 0.964705882352941, 0.76078431372549, 0.627450980392157, 1.0 ],
 					"destination" : [ "obj-14", 0 ],
+					"order" : 1,
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-22", 0 ],
 					"order" : 0,
 					"source" : [ "obj-4", 0 ]
 				}
@@ -424,7 +501,7 @@
 				"patchline" : 				{
 					"color" : [ 0.964705882352941, 0.76078431372549, 0.627450980392157, 1.0 ],
 					"destination" : [ "obj-23", 1 ],
-					"order" : 1,
+					"order" : 2,
 					"source" : [ "obj-4", 0 ]
 				}
 
@@ -447,6 +524,14 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-15", 0 ],
+					"order" : 1,
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-236", 0 ],
 					"source" : [ "obj-5", 4 ]
 				}
@@ -455,6 +540,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-236", 0 ],
+					"order" : 0,
 					"source" : [ "obj-5", 0 ]
 				}
 
