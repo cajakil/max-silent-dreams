@@ -40,5 +40,6 @@ Dependencies - install via the Max Package manager:
 * LowKeyNW
 
 Dependencies from project folder - included in Zip, no action should be needed
-* SD_delayLaneTapOutComponent
-* SD_single-delay-lane
+* SD_delayLaneTapOutComponent.maxpat
+* SD_single-delay-lane.maxpat
+* SD_double-delay-lane.maxpat
