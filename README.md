@@ -18,6 +18,8 @@ I'm unable to generate a stand-alone version for Windows. If you're on Windows, 
 
 ## Documentation is [here](https://www.playbook.com/s/jack-campbell/8dqWmYCDWaF3URK1WUDxQAa6)
 
+## Releases are [here](https://github.com/cajakil/max-silent-dreams/releases/))
+
 **Tips for easier downloading**
 * wait a few seconds for the download to begin
 * it may take several seconds for the files to open
@@ -28,6 +30,8 @@ I'm unable to generate a stand-alone version for Windows. If you're on Windows, 
 When first opening the application, you may need to allow the app access to the folder where it's stored, and the microphone.
 
 The application may not open if you rename the file
+
+
 
 ## Source code
 
