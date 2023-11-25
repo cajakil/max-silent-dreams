@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 115.0, 1372.0, 751.0 ],
+		"rect" : [ 1474.0, -37.0, 1973.0, 903.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -70,7 +70,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 322.966002732515108, 106.152883350849152, 280.0, 37.0 ],
+					"patching_rect" : [ 381.966002732515108, 106.260166436433792, 280.0, 37.0 ],
 					"text" : "messages beginning with length and fade are caught and passed to the playback object."
 				}
 
@@ -115,11 +115,11 @@
 				"box" : 				{
 					"id" : "obj-4",
 					"maxclass" : "newobj",
-					"numinlets" : 3,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 185.465115904807931, 113.760166436433792, 124.0, 22.0 ],
-					"text" : "routepass length fade"
+					"numinlets" : 4,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 185.465115904807931, 113.760166436433792, 201.0, 22.0 ],
+					"text" : "routepass length fade constantdelay"
 				}
 
 			}
@@ -304,6 +304,13 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-23", 1 ],
+					"source" : [ "obj-4", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-23", 1 ],
 					"source" : [ "obj-4", 1 ]
 				}
 
@@ -318,8 +325,8 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-236", 0 ],
-					"midpoints" : [ 299.965115904807931, 174.0, 25.965115904807931, 174.0 ],
-					"source" : [ "obj-4", 2 ]
+					"midpoints" : [ 376.965115904807931, 174.0, 25.965115904807931, 174.0 ],
+					"source" : [ "obj-4", 3 ]
 				}
 
 			}
